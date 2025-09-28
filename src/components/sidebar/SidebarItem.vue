@@ -1,21 +1,15 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import type { Component } from 'vue'
+import type { SidebarItem } from '@/types'
 
-export interface SidebarItemProps {
-    icon: Component
-    text: string
-    link: string
-}
-
-const props = defineProps<SidebarItemProps>()
+const props = defineProps<SidebarItem>()
 </script>
 
 <template>
     <li>
         <RouterLink
             :to="props.link"
-            class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-700"
+            class="flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-700 transition-colors"
             active-class="bg-gray-700 font-semibold"
         >
             <component :is="props.icon" class="w-5 h-5" />

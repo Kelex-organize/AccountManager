@@ -13,6 +13,7 @@
 
         <!-- Grid de cuentas -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <AccountCard v-for="account in accounts" />
             <div
                 v-for="account in accounts"
                 :key="account.id"
@@ -37,6 +38,8 @@
 </template>
 
 <script setup lang="ts">
+import AccountCard from '@/components/account/AccountCard.vue'
+import { AccountInformation } from '@/components/account/AccountCard.vue'
 import { ref } from 'vue'
 
 type Balance = {
