@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SidebarMenu from './SidebarMenu.vue'
-import { Menu, HomeIcon, SettingsIcon, ChartLine } from 'lucide-vue-next'
+import { Menu, Home, SettingsIcon, FileText, BarChart3, Wallet, CreditCard } from 'lucide-vue-next'
 import type { Component } from 'vue'
 
 interface MenuItem {
@@ -10,13 +10,14 @@ interface MenuItem {
 }
 
 const menuItemsTop: MenuItem[] = [
-    { icon: HomeIcon, text: 'Dashboard', link: '/' },
-    { icon: ChartLine, text: 'Analysis', link: '/analysis' },
+    { icon: Home, text: 'Vista principal', link: '/' },
+    { icon: FileText, text: 'Reporte', link: '/reports' },
+    { icon: BarChart3, text: 'Análisis', link: '/analytics' },
+    { icon: Wallet, text: 'Presupuesto', link: '/budget' },
+    { icon: CreditCard, text: 'Cuentas', link: '/accounts' },
 ]
 
-const menuItemsBottom: MenuItem[] = [
-    { icon: SettingsIcon, text: 'Configuración', link: '/configuracion' },
-]
+const menuItemsBottom: MenuItem[] = [{ icon: SettingsIcon, text: 'Settings', link: '/settings' }]
 </script>
 
 <template>
