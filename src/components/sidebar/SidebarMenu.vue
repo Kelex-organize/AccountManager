@@ -8,7 +8,7 @@ const props = defineProps<{ menu: SidebarMenu }>()
 <template>
     <nav>
         <ul class="space-y-2">
-            <SidebarItem v-for="item in props.menu.items" :key="item.link" v-bind="item" />
+            <SidebarItem v-for="item in props.menu.items" :key="item.link" :item="item" />
         </ul>
     </nav>
 </template>

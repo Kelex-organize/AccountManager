@@ -25,7 +25,7 @@ const menuItemsBottom: SidebarMenuType = {
                 <div class="px-3 py-2 rounded hover:bg-gray-700">
                     <Menu />
                 </div>
-                <span class="text-lg font-semibold">CountManager</span>
+                <span class="text-lg font-semibold">Account Manager</span>
             </div>
 
             <SidebarMenu :menu="menuItemsTop" />

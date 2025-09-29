@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { AccountInformation } from '@/types'
 
-const account = defineProps<AccountInformation>()
+const { account } = defineProps<{ account: AccountInformation }>()
 </script>
 
 <template>
-    <div :key="account.id" class="bg-white shadow-md rounded-xl p-4 border border-gray-200">
+    <div class="bg-white shadow-md rounded-xl p-4 border border-gray-200">
         <h2 class="text-lg font-semibold mb-3">{{ account.name }}</h2>
 
         <ul>
