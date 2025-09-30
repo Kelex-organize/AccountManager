@@ -1,23 +1,35 @@
 <script setup lang="ts">
-import type { AccountInformation } from '@/types'
+import type { Account } from '@/types'
 
-const { account } = defineProps<{ account: AccountInformation }>()
+const { account } = defineProps<{ account: Account }>()
+
+const gradients: Record<string, string> = {
+    amber: 'from-amber-400 to-amber-200',
+    orange: 'from-orange-400 to-orange-200',
+    purple: 'from-purple-400 to-purple-200',
+    blue: 'from-blue-400 to-blue-200',
+    emerald: 'from-emerald-400 to-emerald-200',
+    violet: 'from-violet-400 to-violet-200',
+}
 </script>
 
 <template>
     <div
-        class="bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl rounded-2xl p-6 border border-gray-700 hover:scale-105 transition-transform duration-300"
+        class="rounded-2xl p-6 max-w-sm text-white backdrop-blur-sm shadow-inner"
+        :class="[`bg-gradient-to-br ${gradients[account.color]}`]"
     >
-        <h2 class="text-xl font-bold text-purple-400 mb-4">{{ account.name }}</h2>
+        <h2 class="text-xl font-bold text-white drop-shadow-md mb-6">
+            {{ account.name }}
+        </h2>
 
-        <ul>
+        <ul class="space-y-3">
             <li
                 v-for="balance in account.balances"
                 :key="balance.currency"
-                class="flex justify-between py-2 px-3 mb-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors duration-200"
+                class="flex items-center justify-between bg-white/20 rounded-xl py-3 px-4 hover:bg-white/30 transition-colors"
             >
-                <span class="text-gray-300 font-medium">{{ balance.currency }}</span>
-                <span class="text-white font-semibold">
+                <span class="text-white/70 font-medium">{{ balance.currency }}</span>
+                <span class="text-white font-semibold text-lg drop-shadow-sm">
                     {{ balance.amount.toLocaleString() }}
                 </span>
             </li>

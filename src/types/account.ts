@@ -3,8 +3,9 @@ export type Balance = {
     amount: number
 }
 
-export interface AccountInformation {
+export interface Account {
     id: number
     name: string
     balances: Balance[]
+    color: string
 }

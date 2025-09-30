@@ -6,7 +6,7 @@ import SidebarComponent from '@/components/sidebar/SidebarComponent.vue'
     <div class="flex flex-row gap-4 h-screen w-screen bg-zinc-900 p-3">
         <SidebarComponent />
 
-        <main class="flex-1 p-6 bg-stone-100 rounded-xl overflow-y-auto no-scrollbar shadow-lg">
+        <main class="flex-1 p-6 bg-stone-100 rounded-md overflow-y-auto no-scrollbar shadow-lg">
             <router-view />
         </main>
     </div>
