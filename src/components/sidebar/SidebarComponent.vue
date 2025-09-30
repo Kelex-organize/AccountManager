@@ -42,7 +42,7 @@ const toggleSidebar = () => {
     >
         <div class="h-1/5 flex">
             <div
-                class="h-fit p-3 rounded-md transition-all duration-300 hover:bg-zinc-800 hover:shadow-lg"
+                class="h-12 flex items-center px-4 py-2 rounded-md transition-all duration-300 hover:bg-zinc-800 hover:shadow-lg cursor-pointer"
                 @click="toggleSidebar"
             >
                 <Menu class="w-4 h-4 text-zinc-400 transition-colors duration-300" />
