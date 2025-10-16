@@ -1,0 +1,6 @@
+export { default as HomeView } from './HomeView.vue'
+export { default as ReportsView } from './ReportsView.vue'
+export { default as AnalyticsView } from './AnalyticsView.vue'
+export { default as BudgetView } from './BudgetView.vue'
+export { default as AccountsView } from './AccountsView.vue'
+//export { default as SettingsView } from './SettingsView.vue'

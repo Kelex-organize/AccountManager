@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DefaultLayout from './layouts/DefaultLayout.vue'
+</script>
 
 <template>
-    <div class="p-10 text-center text-2xl text-blue-500">¡Hola Tailwind v4 + Vue + Tauri!</div>
+    <DefaultLayout />
 </template>
 
 <style scoped></style>
